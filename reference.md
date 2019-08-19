@@ -10,3 +10,5 @@
 [Ref #9] [Blockchain Demo](https://anders.com/blockchain/blockchain.html)  
 [Ref #10] [BIPs](https://github.com/bitcoin/bips)  
 [Ref #11] [EIPs](https://github.com/ethereum/EIPs)  
+[Ref #12] [Smart Contracts: Building Blocks for Digital Markets](http://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html)  
+[Ref #13] [The Idea of Smart Contracts](http://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/idea.html)
