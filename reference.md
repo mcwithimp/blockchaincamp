@@ -11,4 +11,15 @@
 [Ref #10] [BIPs](https://github.com/bitcoin/bips)  
 [Ref #11] [EIPs](https://github.com/ethereum/EIPs)  
 [Ref #12] [Smart Contracts: Building Blocks for Digital Markets](http://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html)  
-[Ref #13] [The Idea of Smart Contracts](http://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/idea.html)
+[Ref #13] [The Idea of Smart Contracts](http://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/idea.html)  
+[Ref #14] [Tezos Dev Document](https://tezos.gitlab.io/master/)  
+[Ref #15] Tezos Alphanet Install Script  
+For Ubuntu
+```
+$ curl "https://gitlab.com/tezoskorea/quickstart/raw/master/tz_install.sh" | bash -s alphanet
+```
+For MacOS
+```
+$ curl "https://gitlab.com/tezoskorea/quickstart/raw/master/tz_install_mac.sh" | bash -s alphanet
+```
+[Ref #16] [Tezos Octopus](https://tezos.gitlab.io/tezos/_images/octopus.svg)   
