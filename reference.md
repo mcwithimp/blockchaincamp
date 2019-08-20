@@ -22,6 +22,11 @@ For MacOS
 ```
 $ curl "https://gitlab.com/tezoskorea/quickstart/raw/master/tz_install_mac.sh" | bash -s alphanet
 ```
-[Ref #16] [Tezos Octopus](https://tezos.gitlab.io/tezos/_images/octopus.svg)   
+[Ref #16] [Tezos Octopus](https://tezos.gitlab.io/tezos/_images/octopus.svg)      
 [Ref #17] [Alphanet Faucet](https://faucet.tzalpha.net)   
 [Ref #18] [RPCs Index](https://tezos.gitlab.io/master/api/rpc.html)   
+[Ref #19] Tezos Snapshot for Alphanet  
+For Ubuntu
+```
+$ curl "https://gitlab.com/tezoskorea/tezos-snapshot/raw/master/quicksync.sh" | bash -s alphanet
+```
