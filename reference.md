@@ -26,7 +26,6 @@ $ curl "https://gitlab.com/tezoskorea/quickstart/raw/master/tz_install_mac.sh" |
 [Ref #17] [Alphanet Faucet](https://faucet.tzalpha.net)   
 [Ref #18] [RPCs Index](https://tezos.gitlab.io/master/api/rpc.html)   
 [Ref #19] Tezos Snapshot for Alphanet  
-For Ubuntu
 ```
 $ curl "https://gitlab.com/tezoskorea/tezos-snapshot/raw/master/quicksync.sh" | bash -s alphanet
 ```
