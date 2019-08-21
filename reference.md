@@ -54,5 +54,6 @@ $ curl "https://gitlab.com/tezoskorea/tezos-snapshot/raw/master/quicksync.sh" | 
 - [Tezos Foundation](https://tezos.foundation)
 - [Tezos Foundation Biannual Update (2019.08)](https://tezos.foundation/wp-content/uploads/2019/08/Tezos-Foundation-Biannual-Update-August-2019.pdf)
 - [Tezos Gitlab Repository](https://gitlab.com/tezos/tezos/tree/mainnet)
+- [Tezos Dev Document](https://tezos.gitlab.io/master/)
 - [Tezos Stack Exchange](https://tezos.stackexchange.com)
 - [Tezos Developer Portal](https://developers.tezos.com)
