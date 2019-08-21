@@ -24,8 +24,35 @@ $ curl "https://gitlab.com/tezoskorea/quickstart/raw/master/tz_install_mac.sh" |
 ```
 [Ref #16] [Tezos Octopus](https://tezos.gitlab.io/tezos/_images/octopus.svg)      
 [Ref #17] [Alphanet Faucet](https://faucet.tzalpha.net)   
-[Ref #18] [RPCs Index](https://tezos.gitlab.io/master/api/rpc.html)   
+[Ref #18] Tezos RPC API
+- [RPCs Index](https://tezos.gitlab.io/master/api/rpc.html)  
+- Public Node1 - tezTech
+```
+$ curl https://mainnet.tezrpc.me/chains/main/blocks/20 | jq
+```
+- Publcc Node2 - tzscan  
+```
+$ tezos-client -A mainnet-node.tzscan.io -P 443 -S rpc get /chains/main/blocks/20
+```
+
 [Ref #19] Tezos Snapshot for Alphanet  
 ```
 $ curl "https://gitlab.com/tezoskorea/tezos-snapshot/raw/master/quicksync.sh" | bash -s alphanet
 ```
+[Ref #20] Tezos Study Resources
+- [컴퓨터 과학이 여는 세계](https://www.youtube.com/watch?v=HTWSPoDLmHI&list=PL0Nf1KJu6Ui7yoc9RQ2TiiYL9Z0MKoggH )
+- [Blockchain in Khan Academy](https://www.khanacademy.org/economics-finance-domain/core-finance/money-and-banking/bitcoin/v/bitcoin-what-is-it)
+- [Blockchain in Berkely](https://dreamplus.io/academy/blockchain/berkeley)
+- [Mastering Bitcoin](hhttps://github.com/bitcoinbook/bitcoinbook)
+- [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook)
+- [Blockchain Camp Seoul ](https://www.youtube.com/watch?v=y-5mdgFxrfI&list=PLoEVYCIwrH1kobqstqQEpjz_89toxe7Zj)
+- [SKKRYPTO Study Note](https://tezoskoreacommunity.org/)
+- [Tezos Capstone](https://tezoscapstone.com/curriculum/index.html)
+- [B9Lab Tezos 101](https://academy.b9lab.com/courses/)  
+
+[Ref #21] Tezos Reference Sites
+- [Tezos Foundation](https://tezos.foundation)
+- [Tezos Foundation Biannual Update (2019.08)](https://tezos.foundation/wp-content/uploads/2019/08/Tezos-Foundation-Biannual-Update-August-2019.pdf)
+- [Tezos Gitlab Repository](https://gitlab.com/tezos/tezos/tree/mainnet)
+- [Tezos Stack Exchange](https://tezos.stackexchange.com)
+- [Tezos Developer Portal](https://developers.tezos.com)
