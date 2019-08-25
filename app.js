@@ -8,7 +8,7 @@ var keys = {
   sk: PRIVATE_KEY
 }
 var account;
-
+var tmp;
 function loadData() {
   contractAddress = "KT1PSVXthBYGQAryRhh9CSQt4BXQuiq6vKLH";
   eztz.node.setProvider("http://35.222.254.242:8732");
@@ -22,6 +22,7 @@ function loadData() {
 
   eztz.contract.watch(contractAddress, 2, function(s){
     console.log("New storage", s);
+    tmp = s;
     var memo = s.args[0];
     $("#memo").html(memo);
     $("#msg").html("");
