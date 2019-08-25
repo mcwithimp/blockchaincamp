@@ -39,6 +39,6 @@ function writeNewMemo() {
   }).catch(function(e){
     console.log(e);
     const error = JSON.parse(e)
-    $("#msg").html("Error: " + error.[0].id);
+    $("#msg").html("Error: " + error[0].id);
   });
 }
