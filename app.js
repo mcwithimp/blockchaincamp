@@ -31,7 +31,6 @@ function loadData() {
 function writeNewMemo() {
   var memoToWrite = $("#writeNew").val();
   var currentMemo = $("#memo").val();
-  console.log(memoToWrite, currentMemo)
   const additional = memoToWrite.length - currentMemo.length;
   const storageLimit = (additional > 0) ? (additional * 1000) : 0;
   eztz.contract.send(contractAddress, account, keys, 0, '\"' + memoToWrite + '\"', 1000000, 400000, storageLimit).then(function(res){
@@ -39,6 +38,7 @@ function writeNewMemo() {
     $("#msg").html("Please wait for the transaction to complete");
   }).catch(function(e){
     console.log(e);
-    $("#msg").html("Error: " + e.error + " - " + e.errors[1].with.args[0].string);
+    const error = JSON.parse(e)
+    $("#msg").html("Error: " + error.[0].id);
   });
 }
