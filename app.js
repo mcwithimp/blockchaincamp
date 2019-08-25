@@ -10,7 +10,7 @@ var keys = {
 var account;
 
 function loadData() {
-  contractAddress = "KT1U6jj2t2D5WdX3Ez3jKLdtWC96yTzBAAUW";
+  contractAddress = "KT1PSVXthBYGQAryRhh9CSQt4BXQuiq6vKLH";
   eztz.node.setProvider("http://35.222.254.242:8732");
   account = keys.pkh;
   console.log(account);
@@ -34,7 +34,7 @@ function write() {
   const additional = memoToWrite.length - currentMemo.length;
   const storageLimit = (additional > 0) ? (additional * 1000) : 0;
   eztz.contract.send(contractAddress, account, keys, 0, '\"' + newMemo + '\"', 1000000, 400000, storageLimit).then(function(res){
-    console.log(res); 
+    console.log(res);
     $("#msg").html("Please wait for the transaction to complete");
   }).catch(function(e){
     console.log(e);
