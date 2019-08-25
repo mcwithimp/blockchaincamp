@@ -32,13 +32,11 @@ function writeNewMemo() {
   var memoToWrite = $("#writeNew").val();
   var currentMemo = $("#memo").val();
   const additional = memoToWrite.length - currentMemo.length;
-  eztz.contract.send(contractAddress, account, keys, 0, '\"' + memoToWrite + '\"', 5000, 800000, 60000).then(function(res){
+  eztz.contract.send(contractAddress, account, keys, 0, '\"' + memoToWrite + '\"', 1000000, 800000, 60000).then(function(res){
     console.log(res);
-    result = JSON.parse(res);
     $("#msg").html(`Please wait for the transaction to complete.\n Operation Hash: ${res.hash}`);
   }).catch(function(e){
     console.log(e);
-    const error = JSON.parse(e)
-    $("#msg").html(`Error: ${error[0].id}: ${error[0].msg}`);
+    $("#msg").html(`Error: ${e[0].id}: ${e[0].msg}`);
   });
 }
