@@ -22,8 +22,7 @@ function loadData() {
 
   eztz.contract.watch(contractAddress, 2, function(s){
     console.log("New storage", s);
-    tmp = s;
-    var memo = s.args[0];
+    var memo = "Empty now" || s.string;
     $("#memo").html(memo);
     $("#msg").html("");
   });
