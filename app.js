@@ -8,7 +8,7 @@ var keys = {
   sk: PRIVATE_KEY
 }
 var account;
-var tmp;
+
 function loadData() {
   contractAddress = "KT1PSVXthBYGQAryRhh9CSQt4BXQuiq6vKLH";
   eztz.node.setProvider("http://35.222.254.242:8732");
@@ -28,9 +28,10 @@ function loadData() {
   });
 }
 
-function write() {
-  var memoToWrite = $("#write").val();
+function writeNewMemo() {
+  var memoToWrite = $("#writeNew").val();
   var currentMemo = $("#memo").val();
+  console.log(memoToWrite, currentMemo)
   const additional = memoToWrite.length - currentMemo.length;
   const storageLimit = (additional > 0) ? (additional * 1000) : 0;
   eztz.contract.send(contractAddress, account, keys, 0, '\"' + newMemo + '\"', 1000000, 400000, storageLimit).then(function(res){
