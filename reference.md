@@ -23,8 +23,12 @@ For MacOS
 $ curl "https://gitlab.com/tezoskorea/quickstart/raw/master/tz_install_mac.sh" | bash -s alphanet
 ```
 [Ref #16] [Tezos Octopus](https://tezos.gitlab.io/tezos/_images/octopus.svg)      
-[Ref #17] [Alphanet Faucet](https://faucet.tzalpha.net)   
-[Ref #18] Tezos RPC API
+[Ref #17] Tezos Snapshot for Alphanet  
+```
+$ curl "https://gitlab.com/tezoskorea/tezos-snapshot/raw/master/quicksync.sh" | bash -s alphanet
+```
+[Ref #18] [Alphanet Faucet](https://faucet.tzalpha.net)   
+[Ref #19] Tezos RPC API
 - [RPCs Index](https://tezos.gitlab.io/master/api/rpc.html)  
 - Public Node1 - tezTech
 ```
@@ -32,13 +36,10 @@ $ curl https://mainnet.tezrpc.me/chains/main/blocks/20 | jq
 ```
 - Publcc Node2 - tzscan  
 ```
-$ tezos-client -A mainnet-node.tzscan.io -P 443 -S rpc get /chains/main/blocks/20
+$ tezos-client -A alphanet-node.tzscan.io -P 443 -S rpc get /chains/main/blocks/20
 ```
 
-[Ref #19] Tezos Snapshot for Alphanet  
-```
-$ curl "https://gitlab.com/tezoskorea/tezos-snapshot/raw/master/quicksync.sh" | bash -s alphanet
-```
+
 [Ref #20] Tezos Study Resources
 - [컴퓨터 과학이 여는 세계](https://www.youtube.com/watch?v=HTWSPoDLmHI&list=PL0Nf1KJu6Ui7yoc9RQ2TiiYL9Z0MKoggH )
 - [Blockchain in Khan Academy](https://www.khanacademy.org/economics-finance-domain/core-finance/money-and-banking/bitcoin/v/bitcoin-what-is-it)

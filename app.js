@@ -1,12 +1,17 @@
 var contractAddress;
-var keys;
+const PUBLIC_KEY = "edpkvRDrADptQErsed5FmPeCKyNagN5Q6mJ1hnCXvyoeRvB1XHKW73";
+const PUBLIC_KEY_HASH = "tz1LsDttshWsAAPHZqJGYuSZfrkGMcSpZ25B";
+const PRIVATE_KEY = "edskRhYiMktvNXNRbQfUbfb5ytYZTYYEJoJ8YWT2USgYUBgdyg2v8WHbdUntRJaWvwpiqFP4FzBPP1iwt5v8jkZW7XgMgkReEc";
+var keys = {
+  pk: PUBLIC_KEY,
+  pkh: PUBLIC_KEY_HASH,
+  sk: PRIVATE_KEY
+}
 var account;
 
 function loadData() {
   contractAddress = "KT1U6jj2t2D5WdX3Ez3jKLdtWC96yTzBAAUW";
   eztz.node.setProvider("http://localhost:8732");
-  var mnemonic = "submit inside urge possible ripple sudden garage fold birth quality duty bottom genius version slice"
-  keys = eztz.crypto.generateKeys(mnemonic, "password");
   account = keys.pkh;
   console.log(account);
 
@@ -17,18 +22,19 @@ function loadData() {
 
   eztz.contract.watch(contractAddress, 2, function(s){
     console.log("New storage", s);
-    var candidateList = s.args[0];
-    for (var i=1; i<= candidateList.length; i++) {
-      $("#candidate-" + i).html(candidateList[i-1].args[1].int);
-    }
+    var memo = s.args[0];
+    $("#memo").html(memo);
     $("#msg").html("");
   });
 }
 
-function voteForCandidate() {
-  var candidate = $("#candidate").val();
+function write() {
+  var memoToWrite = $("#write").val();
+  var currentMemo = $("#memo").val();
+  const additional = memoToWrite.length - currentMemo.length;
+  const storageLimit = (additional > 0) ? (additional * 1000) : 0;
   // eztz.contract.send(contract, from, keys, amount, parameter, fee, gasLimit, storageLimit)
-  eztz.contract.send(contractAddress, account, keys, 0, '\"' + candidate + '\"', 1000000, 400000, 60000).then(function(res){
+  eztz.contract.send(contractAddress, account, keys, 0, '\"' + newMemo + '\"', 1000000, 400000, storageLimit).then(function(res){
     console.log(res); // Operation result
     $("#msg").html("Please wait for the transaction to complete");
   }).catch(function(e){
