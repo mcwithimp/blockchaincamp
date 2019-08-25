@@ -11,7 +11,7 @@ var account;
 
 function loadData() {
   contractAddress = "KT1U6jj2t2D5WdX3Ez3jKLdtWC96yTzBAAUW";
-  eztz.node.setProvider("http://localhost:8732");
+  eztz.node.setProvider("http://35.222.254.242:8732");
   account = keys.pkh;
   console.log(account);
 
@@ -33,9 +33,8 @@ function write() {
   var currentMemo = $("#memo").val();
   const additional = memoToWrite.length - currentMemo.length;
   const storageLimit = (additional > 0) ? (additional * 1000) : 0;
-  // eztz.contract.send(contract, from, keys, amount, parameter, fee, gasLimit, storageLimit)
   eztz.contract.send(contractAddress, account, keys, 0, '\"' + newMemo + '\"', 1000000, 400000, storageLimit).then(function(res){
-    console.log(res); // Operation result
+    console.log(res); 
     $("#msg").html("Please wait for the transaction to complete");
   }).catch(function(e){
     console.log(e);

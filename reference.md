@@ -37,8 +37,56 @@ $ curl https://mainnet.tezrpc.me/chains/main/blocks/20 | jq
 - Publcc Node2 - tzscan  
 ```
 $ tezos-client -A alphanet-node.tzscan.io -P 443 -S rpc get /chains/main/blocks/20
+```  
+
+[Ref #20] Try Michelson
+- Download resources of the camp
+```
+$ cd ~/tezos
+$ ls
+$ git clone https://gitlab.com/tezoskorea/blockchaincamp.git
+$ cd blockchaincamp
+$ ls
+```  
+- Deploy simeple.tz
+```
+$ cd ~/tezos
+$ ./tezos-client originate contract simple for tezoskorea transferring 0 from tezoskorea running ./blockchaincamp/simple.tz --init ‘“hello”’ --burn-cap 0.303 --force-low-fee
+```  
+
+- Check the contract in local  
+Copy the address of the contract
+```
+$ cd ~/tezos
+$ ./tezos-client list known contracts
+```  
+
+- Check the contract in the blockchain  
+Replace the address part with your contract's address
+```
+$ cd ~/tezos
+$ ./tezos-client rpc get /chains/main/blocks/head/context/contracts/KT1...KLH
+```  
+
+- Check the contract in a block explorer  
+ - Open the web browser (Chrome)
+ - Type this in the url (replace the address part)
+ - https://alphanet.tzscan.io/KT1PS...KLH
+
+
+- Interaction with the contract  
+```
+$ cd ~/tezos
+$ ./tezos-client transfer 0 from tezoskorea to simple --arg ‘”world”’
 ```
 
+
+[Ref #21] Setting the cloud environment
+```
+$ cd ~/tezos/blockchaincamp
+$ sudo apt-get install python3
+$ python3 -m http.server 8080
+```
 
 [Ref #20] Tezos Study Resources
 - [컴퓨터 과학이 여는 세계](https://www.youtube.com/watch?v=HTWSPoDLmHI&list=PL0Nf1KJu6Ui7yoc9RQ2TiiYL9Z0MKoggH )
