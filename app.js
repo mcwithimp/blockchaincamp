@@ -34,7 +34,7 @@ function writeNewMemo() {
   console.log(memoToWrite, currentMemo)
   const additional = memoToWrite.length - currentMemo.length;
   const storageLimit = (additional > 0) ? (additional * 1000) : 0;
-  eztz.contract.send(contractAddress, account, keys, 0, '\"' + newMemo + '\"', 1000000, 400000, storageLimit).then(function(res){
+  eztz.contract.send(contractAddress, account, keys, 0, '\"' + memoToWrite + '\"', 1000000, 400000, storageLimit).then(function(res){
     console.log(res);
     $("#msg").html("Please wait for the transaction to complete");
   }).catch(function(e){
