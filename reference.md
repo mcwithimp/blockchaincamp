@@ -84,11 +84,13 @@ $ ./tezos-client transfer 0 from tezoskorea to simple --arg ‘”world”’
 [Ref #21] Setting the cloud environment
 ```
 $ cd ~/tezos/blockchaincamp
+$ cp ./config.json ~/.tezos-node/config.json
+$ ./tezos-node run --rpc-addr 0.0.0.0:8732
 $ sudo apt-get install python3
 $ python3 -m http.server 8080
 ```
 
-[Ref #20] Tezos Study Resources
+[Ref #22] Tezos Study Resources
 - [컴퓨터 과학이 여는 세계](https://www.youtube.com/watch?v=HTWSPoDLmHI&list=PL0Nf1KJu6Ui7yoc9RQ2TiiYL9Z0MKoggH )
 - [Blockchain in Khan Academy](https://www.khanacademy.org/economics-finance-domain/core-finance/money-and-banking/bitcoin/v/bitcoin-what-is-it)
 - [Blockchain in Berkely](https://dreamplus.io/academy/blockchain/berkeley)
@@ -99,7 +101,7 @@ $ python3 -m http.server 8080
 - [Tezos Capstone](https://tezoscapstone.com/curriculum/index.html)
 - [B9Lab Tezos 101](https://academy.b9lab.com/courses/)  
 
-[Ref #21] Tezos Reference Sites
+[Ref #23] Tezos Reference Sites
 - [Tezos Foundation](https://tezos.foundation)
 - [Tezos Foundation Biannual Update (2019.08)](https://tezos.foundation/wp-content/uploads/2019/08/Tezos-Foundation-Biannual-Update-August-2019.pdf)
 - [Tezos Gitlab Repository](https://gitlab.com/tezos/tezos/tree/mainnet)
