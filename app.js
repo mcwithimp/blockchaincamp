@@ -1,9 +1,6 @@
 var contractAddress;
-var keys = { sk:
-   'edskRrYMqSJK5VeuF7JJ8xY53uj9iPq6jbKzQwcCehydrfTP6H9B6x7UPdQidfwvx51bNDkRq6AXCZpfx3sY7XR4Cve
-   XhQYsEU',
-  pk: 'edpku47Gsf34xh3mJ5bnwWAmUp72UsFsqHyaVrFBeJhvHV1De2cBV6',
-  pkh: 'tz1LpLiNNqMTfPJpf52H558Lmqx6Xomaor1S' }
+var keys = { 
+};
 var account;
 
 function loadData() {
