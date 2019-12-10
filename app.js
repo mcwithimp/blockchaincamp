@@ -1,11 +1,14 @@
 var contractAddress;
 var keys = { 
+  "sk": "edskRrYMg...",
+  "pk": "edpku47Gs...",
+  "pkh": "tz1LpLiNNq..."
 };
 var account;
 
 function loadData() {
-  contractAddress = "KT1PSVXthBYGQAryRhh9CSQt4BXQuiq6vKLH";
-  eztz.node.setProvider("http://35.222.254.242:8732");
+  contractAddress = "KT1PSxxxxx";
+  eztz.node.setProvider("http://12.34.56.78:8732");
   account = keys.pkh;
   console.log(account);
 
